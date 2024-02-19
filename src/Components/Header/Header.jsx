@@ -1,9 +1,10 @@
+import React from "react";
 import "./Header.scss";
 import Icon from "../Img/header-icon.svg";
 import Logo from "../Img/header-logo.svg";
 import Menu from "../Img/menu.svg";
 
-function Header() {
+function Header({modal, setmodal}) {
   return (
     <>
       <header className="header">
@@ -49,7 +50,11 @@ function Header() {
                   Price
                 </a>
               </li>
-              <a className="nav__link-img" href="#">
+              <a
+                className="nav__link-img"
+                href="#"
+                onClick={() => setmodal(true)}
+              >
                 <img src={Menu} alt="menu" width={30} height={14} />
               </a>
             </ul>
